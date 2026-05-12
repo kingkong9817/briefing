@@ -1,161 +1,310 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>Ham Insight · 每日早报 2026-05-12</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#f5f5f5;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;color:#1a1a1a;font-size:16px;line-height:1.8;padding:0}
-.wrap{max-width:680px;margin:0 auto;background:#fafaf8;padding:20px 16px 32px}
-h1{font-size:26px;font-weight:700;color:#1a1a1a;margin:0 0 4px}
-h2{font-size:20px;font-weight:700;color:#1a1a1a;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid #e0e0e0}
-h3{font-size:18px;font-weight:700;color:#1a1a1a;margin:0 0 8px}
-.sub{font-size:14px;color:#888;margin:0 0 20px}
-section{margin:0 0 36px;padding:20px;border-radius:12px}
-p{margin:0 0 8px;font-size:15px;line-height:1.8}
-p:last-child{margin-bottom:0}
-a{color:#2563eb;text-decoration:none;word-break:break-all}
-ul,ol{margin:4px 0 8px 16px;padding:0}
-li{margin:0 0 6px;font-size:15px;line-height:1.7}
-.highlight-card{border-left:4px solid #f59e0b;background:#fffcf0;padding:16px 16px 12px;border-radius:8px;margin:0 0 12px}
-.highlight-card p{margin:0 0 4px}
-.highlight-card .tag{display:inline-block;font-size:12px;font-weight:600;color:#b45309;background:#fef3c7;padding:2px 8px;border-radius:4px;margin:0 0 6px}
-table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
-th{padding:8px 6px;text-align:left;font-weight:600;border-bottom:1px solid #d4d4d4;background:#f0f0f0}
-td{padding:8px 6px;border-bottom:1px solid #e8e8e8}
-.follow-card{background:linear-gradient(135deg,#fafaf8,#f0f0f0);border-radius:10px;padding:20px;margin:0 0 24px}
-.follow-table{width:auto;margin:0 auto}
-.follow-table td{padding:4px 8px;border:none;vertical-align:middle}
-.footer{text-align:center;font-size:13px;color:#999;padding:16px 0 0;border-top:1px solid #e8e8e8;margin:0}
-.risk-block{background:#1a1a1a;padding:16px 20px;border-radius:12px;color:#e0e0e0}
-.risk-block h3{color:#f59e0b;margin:0 0 8px}
-.risk-block p,.risk-block li{color:#ccc}
-.market-grid{table-layout:fixed}
-.market-grid td{font-size:13px;padding:6px 4px}
-.mkt-up{color:#dc2626;font-weight:600}
-.mkt-down{color:#16a34a;font-weight:600}
-.mkt-neutral{color:#666}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#f5f5f5;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;color:#1a1a1a;line-height:1.8;}
+.container{max-width:680px;margin:0 auto;padding:16px;}
+.header{text-align:center;padding:32px 0 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:16px;margin-bottom:20px;color:#fff;}
+.header h1{font-size:24px;font-weight:700;letter-spacing:1px;}
+.header .date{font-size:15px;color:rgba(255,255,255,.7);margin-top:6px;}
+.header .tagline{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px;}
+.section{margin-bottom:36px;padding:20px;border-radius:12px;background:#fafaf8;}
+.section-highlight{border-left:4px solid #2563eb;background:linear-gradient(135deg,#fafaf8,#eff6ff);padding:18px 20px;margin-bottom:20px;border-radius:0 12px 12px 0;}
+.section-title{font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #e5e5e5;}
+.section-title .icon{margin-right:6px;}
+.card{margin-bottom:14px;}
+.card:last-child{margin-bottom:0;}
+.card-title{font-size:16px;font-weight:600;color:#1a1a1a;margin-bottom:4px;}
+.card-desc{font-size:14px;color:#555;line-height:1.7;}
+.card-meta{font-size:12px;color:#999;margin-top:4px;}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin-right:4px;color:#fff;}
+.tag-geo{background:#dc2626;}
+.tag-tech{background:#2563eb;}
+.tag-cn{background:#059669;}
+.tag-finance{background:#d97706;}
+.tag-semi{background:#7c3aed;}
+.tag-robot{background:#0891b2;}
+.tag-crypto{background:#f59e0b;}
+.tag-science{background:#8b5cf6;}
+.market-table{width:100%;border-collapse:collapse;font-size:14px;}
+.market-table th{background:#f0f0f0;padding:8px 10px;text-align:left;font-weight:600;color:#333;border-bottom:2px solid #ddd;}
+.market-table td{padding:8px 10px;border-bottom:1px solid #eee;color:#444;}
+.market-table tr:last-child td{border-bottom:none;}
+.market-up{color:#dc2626;}
+.market-down{color:#059669;}
+.market-flat{color:#333;}
+.deep-dive{background:#1a1a2e;color:#e5e5e5;border-radius:12px;padding:20px;}
+.deep-dive .section-title{color:#fff;border-bottom-color:rgba(255,255,255,.15);}
+.deep-dive .card-title{color:#fff;}
+.deep-dive .card-desc{color:rgba(255,255,255,.75);}
+.risk-card{background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1px solid #fecaca;border-radius:12px;padding:18px 20px;margin-bottom:20px;}
+.risk-card .card-title{color:#991b1b;}
+.risk-card .card-desc{color:#7f1d1d;}
+.outlook-card{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:12px;padding:18px 20px;}
+.outlook-card .card-title{color:#075985;}
+.outlook-card .card-desc{color:#0c4a6e;}
+.follow-card{background:linear-gradient(135deg,#fafaf8,#f0f0f0);border-radius:10px;padding:20px;margin-bottom:24px;text-align:center;}
+.follow-card table{margin:0 auto;}
+.follow-card td{vertical-align:middle;padding:0 8px;}
+.follow-card .qrcode{width:120px;height:120px;border-radius:8px;border:2px solid #e0e0e0;}
+.follow-card .title{font-size:16px;font-weight:700;color:#1a1a1a;line-height:1.4;}
+.follow-card .sub{font-size:13px;color:#666;line-height:1.5;margin-top:4px;}
+.follow-card .small{font-size:11px;color:#999;margin-top:4px;}
+.footer{text-align:center;padding:20px;font-size:12px;color:#999;}
+.footer a{color:#666;text-decoration:none;}
+@media (max-width:480px){
+  .container{padding:12px;}
+  .section{padding:16px;}
+  .header{padding:24px 0 16px;}
+  .header h1{font-size:20px;}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
 
-<section style="margin:0 0 20px;padding:0">
-<h1>Ham Insight · 每日早报</h1>
-<p class="sub">2026年5月12日 星期二 · 专属生成</p>
-</section>
-
-<section style="background:#fffcf0;border:1px solid #fde68a;padding:0;border-radius:0">
-<div class="highlight-card" style="border-left:4px solid #eab308;background:#fffcf0;padding:16px;border-radius:8px;margin:0">
-<span class="tag" style="display:inline-block;font-size:12px;font-weight:600;color:#92400e;background:#fde68a;padding:2px 10px;border-radius:4px;margin:0 0 8px">🔥 核心主线</span>
-<p style="font-size:16px;font-weight:700;color:#92400e;margin:0 0 4px">1. Trump下周访华，Musk/Cook随行，市场聚焦中美会谈</p>
-<p style="font-size:14px;color:#78350f;margin:0 0 12px">美国总统特朗普将于5月13-15日访问中国与习近平会晤，讨论伊朗战争、贸易、AI、台湾、核武器等核心议题。NVIDIA黄仁勋未受邀，凸显中美AI博弈升级。</p>
-<p style="font-size:16px;font-weight:700;color:#92400e;margin:0 0 4px">2. 全球市场再创新高：美股S&P 500/Nasdaq纪录收盘</p>
-<p style="font-size:14px;color:#78350f;margin:0 0 12px">伊朗停火协议'生命垂危'，特朗普拒绝和平方案，油价飙升。但美股无视地缘风险续创新高，年内S&P 500第16次创纪录收于7412点。</p>
-<p style="font-size:16px;font-weight:700;color:#92400e;margin:0 0 4px">3. Cerebras启动今年最大规模IPO，目标融资48亿美元</p>
-<p style="font-size:14px;color:#78350f;margin:0">UAE AI芯片公司Cerebras将IPO价格区间提高至150-160美元，需求超20倍认购，AI芯片赛道持续火热。</p>
+<!-- Header -->
+<div class="header">
+  <h1>📰 Ham Insight · 每日早报</h1>
+  <div class="date">2026年5月12日 星期二</div>
+  <div class="tagline">你的每日 AI 情报官</div>
 </div>
-</section>
 
-<section style="background:#f5f5f5">
-<h2>📊 市场速览</h2>
-<table class="market-grid">
-<tr><th>指标</th><th>数值</th><th>变化</th></tr>
-<tr><td>S&P 500</td><td>7,412.84</td><td class="mkt-up">+0.19%</td></tr>
-<tr><td>纳斯达克</td><td>26,277.51</td><td class="mkt-up">+0.12%</td></tr>
-<tr><td>上证指数</td><td>4,225.02</td><td class="mkt-up">+1.08%</td></tr>
-<tr><td>深证成指</td><td>15,899.30</td><td class="mkt-up">+2.16%</td></tr>
-<tr><td>黄金</td><td>$4,669.77/oz</td><td class="mkt-down">-0.4%</td></tr>
-<tr><td>WTI原油</td><td>$98.25/bbl</td><td class="mkt-up">+2.97%</td></tr>
-<tr><td>布伦特原油</td><td>$104.51/bbl</td><td class="mkt-up">+0.29%</td></tr>
-<tr><td>人民币/美元</td><td>6.8426</td><td class="mkt-up">+41基点</td></tr>
-<tr><td>A50期货</td><td>15,978.50</td><td class="mkt-up">+0.27%</td></tr>
-<tr><td>恒生指数</td><td>26,406.84</td><td class="mkt-up">+0.05%</td></tr>
-</table>
-<p style="font-size:12px;color:#999;margin:8px 0 0">数据截至5月12日亚盘早市 · 来源：各交易所实时数据</p>
-</section>
+<!-- 核心主线 -->
+<div class="section" style="background:#fafaf8;">
 
-<section style="background:#faf5ff">
-<h2>🇨🇳 中国新闻</h2>
-<ul>
-<li><strong>央行发布一季度货币政策执行报告：</strong>继续实施适度宽松货币政策，着力扩大内需，构建全面宏观审慎管理体系。</li>
-<li><strong>人民币中间价报6.8426元：</strong>5月12日人民币对美元中间价上调41个基点。</li>
-<li><strong>推进全国统一大市场建设：</strong>中共中央政治局会议强调纵深推进，深入整治内卷式竞争。</li>
-<li><strong>我国牵头制定5项天然气国际标准发布：</strong>涵盖页岩气开发、含硫气藏等领域，提供'中国方案'。</li>
-<li><strong>A股创11年新高：</strong>上证+1.08%，深成指+2.16%，创指+3.5%，两市成交放量。</li>
-</ul>
-</section>
+  <div class="section-highlight">
+    <div class="card-title" style="font-size:16px;color:#1e40af;">🇨🇳🇺🇸 Trump访华在即，美中博弈进入最关键一周</div>
+    <div class="card-desc" style="font-size:14px;color:#475569;">美国总统特朗普将于5月13-15日访问中国，携Elon Musk和Tim Cook随行。双方将讨论伊朗战争、贸易、AI、台湾和核武器等核心议题。这是美中关系的关键转折点。</div>
+  </div>
 
-<section style="background:#f0fdf4">
-<h2>🌍 国际新闻</h2>
-<ul>
-<li><strong>Trump访华在即：</strong>5月13-15日访问中国，Musk和Cook随行，讨论伊朗战争、贸易、AI、台湾、核武器等议题。</li>
-<li><strong>伊朗战争持续：</strong>特朗普称停火协议'生命垂危'，拒绝伊朗最新和平方案，亚洲面临第二轮能源冲击。</li>
-<li><strong>俄乌冲突：</strong>美斡旋停火协议即将到期，双方互相指责继续交火，战火恐升级。</li>
-<li><strong>欧盟制裁：</strong>对协助俄罗斯绑架乌克兰儿童的实体和个人实施制裁。</li>
-<li><strong>伊朗战争重塑全球投资风险地图：</strong>投资者加速重新评估资产配置，阿联酋客户咨询量增长41%。</li>
-</ul>
-</section>
+  <div class="section-highlight">
+    <div class="card-title" style="font-size:16px;color:#1e40af;">⚡ Cerebras冲刺48亿美元IPO，AI芯片热潮再起</div>
+    <div class="card-desc" style="font-size:14px;color:#475569;">这家UAE AI芯片公司将IPO价格区间上调至150-160美元，发行3000万股，融资目标48亿美元。需求已超20倍认购，亚马逊和OpenAI是其核心客户。</div>
+  </div>
 
-<section style="background:#f0f7ff">
-<h2>🤖 AI / 半导体 / 机器人 / 智能汽车</h2>
-<ul>
-<li><strong>Cerebras IPO蓄势待发：</strong>UAE AI芯片公司目标融资48亿美元，需求超20倍认购，亚马逊和OpenAI为其客户。</li>
-<li><strong>Intel × NVIDIA合作推进：</strong>Intel CEO确认合作产品计划仍在推进，包括为AI基础设施制造定制x86 CPU。</li>
-<li><strong>力积电Q1营收+22%：</strong>先进制程需求强劲，净利润达142.31亿新台币。</li>
-<li><strong>SAP部署全自主AI机器人：</strong>与Cyberwave合作在物流仓库部署AI驱动机器人，标志企业物理AI里程碑。</li>
-<li><strong>韩国探索现代机器人军事用途：</strong>因兵源下降考虑将机器人用于国防。</li>
-<li><strong>韩国RLWRLD：</strong>通过捕捉工人技术训练AI机器人大脑，面向酒店等行业。</li>
-<li><strong>中国AGIBOT：</strong>将2026年定位为人形机器人'部署阶段'起点，覆盖零售、物流、工业场景。</li>
-<li><strong>法律AI转型加速：</strong>美国成年人AI工作使用率三年翻倍至50%。Newsweek发布2026年AI影响力奖。</li>
-<li><strong>软件定义汽车网络安全风险：</strong>行业面临难以管理的新安全威胁。</li>
-</ul>
-</section>
+  <div class="section-highlight">
+    <div class="card-title" style="font-size:16px;color:#1e40af;">🏦 央行明确继续适度宽松，扩大内需成主基调</div>
+    <div class="card-desc" style="font-size:14px;color:#475569;">央行发布《2026年第一季度中国货币政策执行报告》，强调精准有效实施适度宽松货币政策，着力扩大内需，加快构建宏观审慎管理体系。</div>
+  </div>
 
-<section style="background:#fffbeb">
-<h2>💰 财经</h2>
-<ul>
-<li><strong>油价因伊朗局势上涨：</strong>特朗普拒绝和平方案，WTI升至$98.25，摩根士丹利警告霍尔木兹关闭可能推高布伦特至$150。</li>
-<li><strong>Kalshi完成10亿美元F轮融资：</strong>近期最大规模金融科技融资交易之一。</li>
-<li><strong>比特币预测目标$120,000：</strong>机构需求和ETF资金流入推动，BTC当前在$95,000-$120,000区间。</li>
-<li><strong>LM Funding：</strong>持有334 BTC价值2530万美元，4月净挖矿9.4 BTC。</li>
-</ul>
-</section>
+  <div class="section-highlight">
+    <div class="card-title" style="font-size:16px;color:#1e40af;">🏭 Intel × NVIDIA：合作x86定制芯片推进AI基础设施</div>
+    <div class="card-desc" style="font-size:14px;color:#475569;">Intel CEO确认与NVIDIA的合作产品计划仍在推进，包括为AI基础设施制造定制x86 CPU。两大巨头的联手正在重塑芯片产业格局。</div>
+  </div>
 
-<section style="background:#f5f5f5;border:1px solid #e0e0e0">
-<div class="highlight-card" style="border-left:4px solid #7c3aed;background:#f5f3ff;padding:16px;border-radius:8px;margin:0">
-<h3 style="color:#5b21b6;margin:0 0 8px">🔍 深度解读</h3>
-<p><strong>Trump访华的战略考量：</strong>特朗普此次访华级别极高——不仅携Musk、Cook等顶级商界领袖，更将讨论伊朗战争、AI竞争等核心议题。未邀请NVIDIA黄仁勋或暗示在AI芯片领域的对华限制不会放松。市场关注贸易和关税谈判是否取得突破。</p>
-<p style="margin-top:8px"><strong>伊朗危机对全球市场的影响：</strong>油价已突破$98，若霍尔木兹海峡真正被封锁，布伦特原油可能冲击$150。亚洲作为最大能源进口地区将首当其冲，能源安全成为各国2026下半年核心议题。</p>
+  <div class="section-highlight">
+    <div class="card-title" style="font-size:16px;color:#1e40af;">🛢️ 伊朗战争持续升级，亚洲面临第二轮能源冲击</div>
+    <div class="card-desc" style="font-size:14px;color:#475569;">特朗普称伊朗停火协议"生命垂危"，美方拒绝和平方案。油价持续攀升，AP警告亚洲将面临伊朗战争带来的第二轮能源冲击，霍尔木兹海峡局势持续紧张。</div>
+  </div>
+
 </div>
-</section>
 
-<section style="background:#1a1a1a;border-radius:12px;padding:20px">
-<h3 style="color:#f59e0b;margin:0 0 8px">⚠️ 风险点</h3>
-<p style="color:#ccc;font-size:14px;margin:0 0 12px">摩根士丹利警告霍尔木兹关闭可能推高布伦特至150美元 · 伊朗停火协议濒临破裂 · 俄乌停火即将到期 · AI监管政策不确定性 · 中美贸易博弈升级风险</p>
-<h3 style="color:#f59e0b;margin:0 0 8px">👁️ 下一阶段观察</h3>
-<p style="color:#ccc;font-size:14px;margin:0">Trump访华成果（5/13-15） · 伊朗谈判走向 · 美股CPI数据（本周） · 半导体产业链动向 · Cerebras IPO定价</p>
-</section>
+<!-- 市场速览 -->
+<div class="section" style="background:#f8fafc;">
+  <div class="section-title"><span class="icon">📊</span>市场速览</div>
+  <table class="market-table">
+    <thead><tr><th>指标</th><th>数值</th><th>变化</th></tr></thead>
+    <tbody>
+      <tr><td>S&P 500</td><td>7,412.84</td><td class="market-up">+0.19%</td></tr>
+      <tr><td>纳斯达克</td><td>26,274.12</td><td class="market-up">+0.10%</td></tr>
+      <tr><td>上证指数</td><td>4,213.95</td><td class="market-down">-0.26%</td></tr>
+      <tr><td>深证成指</td><td>15,816.62</td><td class="market-down">-0.52%</td></tr>
+      <tr><td>黄金</td><td>4,726.10 USD/oz</td><td class="market-up">+0.16%</td></tr>
+      <tr><td>WTI原油</td><td>98.94 USD/bbl</td><td class="market-up">+0.89%</td></tr>
+      <tr><td>布伦特原油</td><td>104.84 USD/bbl</td><td class="market-up">+0.60%</td></tr>
+      <tr><td>人民币/美元</td><td>6.7925</td><td class="market-down">-0.12%</td></tr>
+      <tr><td>恒生指数</td><td>26,454.08</td><td class="market-up">+0.18%</td></tr>
+    </tbody>
+  </table>
+  <div style="font-size:12px;color:#999;margin-top:8px;">数据来源：Yahoo Finance | 更新时间：2026-05-12</div>
+</div>
 
-<section class="follow-card" style="margin:24px 0;background:linear-gradient(135deg,#fafaf8,#f0f0f0);border-radius:10px;padding:20px">
-<table class="follow-table">
-<tr>
-<td style="border:none;padding:0 12px 0 0;vertical-align:middle;width:120px">
-<img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4Uo9RXhpZgAATU0AKgAAAAgABQEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAAITAAMAAAABAAEAAIdpAAQAAAABAAAAWgAAALQAAABIAAAAAQAAAEgAAAABAAeQAAAHAAAABDAyMjGRAQAHAAAABAECAwCgAAAHAAAABDAxMDCgAQADAAAAAQABAACgAgAEAAAAAQAAAa6gAwAEAAAAAQAAAa6kBgADAAAAAQAAAAAAAAAAAAYBAwADAAAAAQAGAAABGgAFAAAAAQAAAQIBGwAFAAAAAQAAAQoBKAADAAAAAQACAAACAQAEAAAAAQAAARICAgAEAAAAAQAASSEAAAAAAAAASAAAAAEAAABIAAAAAf/Y/9sAhAABAQEBAQECAQECAwICAgMEAwMDAwQFBAQEBAQFBgUFBQUFBQYGBgYGBgYGBwcHBwcHCAgICAgJCQkJCQkJCQkJAQEBAQICAgQCAgQJBgUGCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQn/3QAEAAr/wAARCACgAKADASIAAhEBAxEB/8QBogAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoLEAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP1TooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK5T4pfFLwx8FvAmp+MvGWp/2N4b03yvtd79nln8vzJUiT5IlZzl5EHCnGcngE0AdXRXyr/w9H/Zi/6Kb/wCUDVP/AJGo/wCHo/7MX/RTf/KBqn/yNQB9VUV8q/8AD0f9mL/opv8A5QNU/wDkaj/h6P8Asxf9FN/8oGqf/I1AH1VRXyr/AMPR/wBmL/opv/lA1T/5Go/4ej/sxf8ARTf/ACgap/8AI1AH1VRXyr/w9H/Zi/6Kb/5QNU/+RqP+Ho/7MX/RTf8Aygap/wDI1AH1VRXlXwL/AGovhh+0p/bf/CuPE3/CR/2L5H2//QLq18nzvM8r/XxJuz5Un3c4284yM9V8Uvil4Y+C3gTU/GXjLU/7G8N6b5X2u9+zyz+X5kqRJ8kSs5y8iDhTjOTwCaAOroryTX/+ChHwB8N+JdU0HU/iLFZX+mXU1ndwPpWpN5U0TFJE3JbFTtYEYBIPYmmf8PR/2Yv+im/+UDVP/kagD1X4F/tRfDD9pT+2/wDhXHib/hI/7F8j7f8A6BdWvk+d5nlf6+JN2fKk+7nG3nGRj1WvlX4W/t6/An40+O9M8G+DfHP9s+JNS837JZf2RfweZ5cTyv8APLAqDCRueWGcYHJAr6qoAKKKKACiiigAooooAKKKKACuU+KXxS8MfBbwJqfjLxlqf9jeG9N8r7Xe/Z5Z/L8yVIk+SJWc5eRBwpxnJ4BNeFft6/t6/A74Lfso/EKx8WeOf7J8Sal4e1Kz0ux/si/n8+6mtZEiTfFAyJlmALMQFGSa/n+1P/gqb+ztq1hcWV58UvtFrcRtFLG2iahhkYYIP+j8ZBNAH9Mf/AA9H/Zi/6Kb/AOUDVP8A5Gr1X4F/tRfDD9pT+2/+FceJv+Ej/sXyPt/+gXVr5PneZ5X+viTdnypPu5xt5xkZ/lW/4emfs2/9FJ/8o2qf/ItH/D0z9m3/AKKT/wCUbVP/AJFoA/qoooor5V/4Kj/8mJ/E3/uGf+nS0oAwf+DhP/lG98U/+3D/ANOFrX81lf0p/wDBwn/yje+Kf/bh/wCnC1r+aygAooooAKKKKACvv/8A4IcRJN+3t4aSQZRtI1oH/wABGr4Ar7//AOCG3/Kfbwj/ANwjWv8A0mNAH9R1Ffyr0UAfv9/wS4/5MT+GX/cT/wDTpd19VUV/KvX6qf8ABDH/AJrZ/wBwT/2/oA/VX4peKf8AhBvAniLxF5Xnf2VptzfeVnbv8qJ32k45ztxnBr+eT/h+d/1RP/y6/wD7ir+jjxp4bj8YeCvEHh6RzGmradcWDsvUeZGycZ9N1fzYf8OMP+q2/wDlqf8A3bQB5V/w47/av/6J7a/+FNpn/wAk0f8ADjv9q/8A6J7a/wDhTaZ/8k19q/sF/wDBLrxH+zj+1l4H+I2sfEKDXbDTDfebpkPh94JJPtFpNAm2Q3TqNrSBj8pyARxnI/f6gD+Vf/hx3+1f/wBE9tf/AAptM/8Akmj/AIcd/tX/APRPbX/wp9M/+Sa/qoooA/lX/wCHHf7V/wD0T21/8KfTP/kmj/hx3+1f/wBE9tf/AAptM/8Akmv6qKKAP5V/+HHf7V//AET21/8ACn0z/wCSa+AP2tf2dfFH7JXxr1b4VeMLi0utV02C2nkksHbymE8KyrjeqvkBsHK4z0zX+iBX4A/8HIf7J/xB+M37UumfFb4f+ENY8X6Q3hm30+ebStPnvnjmt57hiCkCM4yssZ6dTQB+JVfVX/Drj9p3/omX/lf0v/5Jr5Vr+qigD+Vev3+/wCCXH/Jifwy/wC4n/6dLuvAH/4II/tX/wDRO5v/AAp9M/8AkmvgD9qP4F/8M1/HbxN8OP7b/wCEj/sX7L/xM/sn2XzvOtYp/wDVb32483b945254zgA9Vr+qiv5V6/qooA/lXor+qj4FeFf+EQ+C/gjQZU2zWei2dtKnXY6QIrDPsQRQB3NFFFABXyr/wAFR/8AkxP4m/8AcM/9OlpX1VXyr/wVH/5MT+Jv/cM/9OlpQB+ANf1UV/KvX9VFAH4A/wDBUf8A5Ps+Jv8A3DP/AE12lfKtff8A+3r/AME6f2hvj7+1R47+I3gPwfZa34Y1n7D9jvZNe0+1eTyLC3t5P3c1wkgxJFIOW5xnkEE/Ov8Aw7S/a0/6Jxa/+FZon/yfQB8q0V9Vf8O0v2tP+icWv/hWaJ/8n0f8O0v2tP8AonFr/wCFZon/AMn0AfKtff8A/wAEOP8AlPt4R/7hGtf+kxrxX/h2l+1p/wBE4tf/AArNE/8Ak+vsD/gh/wDs1fFL4Of8FAvCviPx74Ytte0Qadq9qfs2sadMyu9sQAVguHcAnqduB3I4oA/q1ooor+aiiiigAooooAKKKKACvlX/AIKj/wDJifxN/wC4Z/6dLSvqqvlX/gqP/wAmJ/E3/uGf+nS0oA/AGv6qK/lXr+qigD8Af+Co/wDyfZ8Tf+4Z/wCmu0r5Vr6q/wCCo/8AyfZ8Tf8AuGf+mu0r5VoAKKKKAP3+/wCCXH/Jifwy/wC4n/6dLuvqqvlX/glx/wAmJ/DL/uJ/+nS7r6qoA/lXor+qv4W+Fv8AhBvAnh3w75vnf2VptrZeZjG/yokTdjtnGa/P79vX9gr47fGn9rHxz4N8G+Of7G8N6b9h+yWX9kWE/l+ZYW8r/PLAznLyOeWOM4HAAoA8q/4IY/8ANbP+4J/7f1+qlflX/wQx/wCa2f8AcE/9v6/VSgAr+Vev6qK/lXoA/qoooqK4uIrOCSeaRYoYlLu7nCqoGSST0AFAD6K+Yrf/AIKMfs93WrJpqfEa2Fy8mwN9gvBGTnpvMIXH1Ir6bBBGRyD0IoAKKKKACvlX/gqP/wAmJ/E3/uGf+nS0r6qr5V/4Kj/8mJ/E3/uGf+nS0oA/AGv6qK/lXr+qigD8Af8AgqP/AMn2fE3/ALhn/prtK+Va/VT/AIKjf8E7vj7+0r+1V47+I3gPwjY634X1n7D9jvY9e0+1eTyLC3t5P3U1wkgxJFIOW5xnkEEfIf8Aw7S/a0/6Jxa/+FZon/yfQB8q0V9Vf8O0v2tP+icWv/hWaJ/8n0f8O0v2tP8AonFr/wCFZon/AMn0Af1BfsFfC3xP8Fv2TvA3g3xlpn9jeJNN+3fa7L7RFP5fmX9xKnzxMyHKSIeGOM4PIIr6Ar8q/wDgl1/wUk0X4eeAvB37N3xI0i90XVtDP9nadr4uI5LO5E0jPbqy8OhJKoSQR0J6ZP798HkdD3oA/lXor+qiv5V6APqo/wDBUf8A5MT+Jv8A3DP/AE6WlfgDX9VH/Co/hf8AEb4T3fwluNasLDwH4t8PvdXFqWZf9Jlhki8+YNuBjLs5PqOOnX5V/wCHHf7V/wD0T21/8KbTP/kmgD8q6/rV/wCCTPxa/wCFpfsdeFLC5m8/U/CjSaFcZO4hIjuhz/2wkjH/AAH6191f8Ewf2JfiT+zlZ3mpfEOa20W3v9NhtR4fguIrqSWRZGYXLPGxjXhgFwxbqSMHGfsDQP2NvhH4VsNPsLTSb77Jp2oHVIbFtWuTaSXRfeZHg37HyeSv3T6UAfFX/Bc7/mif/cb/wDbCvlX/gmX+3P+z3+w78YvFHjL4u+JbjR9QS2jh0+G20m+1Hz4g3zHdbQuoDNj73zcdMV+vX7cfwL8U/tH/BWD4f8AhMwRaxf39rItzdt/o9vbqzeZK3qwHIUcsQB0yR+cP/Djv9q//ontr/4U+mf/ACTSbS3KSb2PqC3/AOCvv/BP24t4p1+NdggyQRJpesIwI9i/0/FW/wDh+f8A8E4f+jyPD3/gFqP/AMbr4h/4c+fH/wD6kH/wqP8A8FqP+HPnx/8A+pB/8Kj/APBahnDnzL/h+f8A8E4f+jyPD3/gFqP/AMbo/wCH5/8AwTh/6PI8Pf8AgFqP/wAbr4f/AOHPnx//AOpB/wDCo/8AwWo/4c+fH/8A6kH/AMKj/wDBagD7g/4fn/8ABOH/AKPI8Pf+AWo//G69M+DP/BWL9lT43eONM8F+GPifaXGu6kXS1tp7C9tRK6qW2eZLEqBiAQuWAJwOpFfAP/Dnz4//APUg/wDhUf8A4LV0vw7/AOCEvx/+H/xC8NeL7e/8BXUmh6ja6gtrNrdyqzGB1fYSLY4B2kH2NAH9HFeVftR/HT/hmr4E+JviP/Yn/CR/2L9l/wCJZ9r+y+d511FB/rdj7cebu+6c7ccZyPov4deMbf4i/D/AMO+K7OLybXXNPs9ThQHcFjuIklUZ7gBgM1+en/BbL4n618Of2U9G0TQXPneLfEUWn3S4BzaxQSzEe28xrn0yPUA/k3/AMO0v2tP+icWv/hWaJ/8n18//FL4W+J/gv471Pwb4y0z+xvEmm+V9rsvtEU/l+ZEkqfPEzIcpIh4Y4zg8giv6qK/lXr+mj/gnx/wTp/Z3+Pv7K/gf4jfEDwZY694o1j7d9svZNe1C1eTyL+4gT91BcRxjEcaDhRnGTySaAPzB/4Y7/av/6J7a/+FNpn/wAk1+4H/BLrX/jl8H/gtpfhz49aRNp+pw2Ea6XcXNzBPKtqM7IZWjlfDJwu44yACeSa9q/4dpftaf8AROLX/wAKzRP/AJPo/wCHaX7Wn/ROLX/wrNE/+T6APlWiv3+/4dcfsxf9Ey/8r+qf/JNfkB+3r8LfDHwW/ax8c+DfBumf2N4b037D9ksvtEs/l+ZYW8r/ADysznLyOeWOM4HAAoA8Ar+qj4FeFf8AhEPgv4I0GVNk1notnbSp12OkCqwz7EEV/KvX9VH/AAqP4X/Eb4T3fwluNasLDwH4t8PvdXFqWZf9Jlhki8+YNuBjLs5PqOOnQB9FUV/KvRQB+FX/AAVB/Yr+JPg79pnxd8R/Dej3niXw54rvjqX2iziMm2VyN6uB90q3TPYgHk1wP/DtL9rT/onFr/4Vmif/ACfX9VFFAH4A/wDDtL9rT/onFr/4Vmif/J9H/DtL9rT/AKJxa/8AhWaJ/wDJ9f1UUUAfyr/Sv66P2N/id/wt79lP4beLJZvNvbrRoIb1s5P2mACHk/7WzP419s+MPhb4S8d2Mlr4g8P6Zq8Ui7G+2Wkcpx6gsM596/Mr/g49+Iviz9nz9mX4X+HPgxqWq/DvU774j6JJDN4cunsJYBBHePtja3ZWVG2AYGM4HSgD9E6K+D/Bn/BbH9g3Vvhz4U1XWPjRp+ka1eaXZzX1jNo2rSSW1y8KNLETHayIxRyVyjFcglTjmvtT4WfEDw/8Wfhl4c8ceGLz+0PDfiLTbfVdPuvLeLz7aeNZI32OA65RgdrAEZ5ANAHYV8q/8FR/+TE/ib/3DP8A06WlfVVfKv8AwVH/AOTE/ib/ANwz/wBOlpQB+ANf1UV/KvX9VFAH4A/8FR/+T7Pib/3DP/TXaV8q1+qv/BST9gr4+/tKftVeO/iN4D8H2Wt+GNZ+w/Y73+3tPtd/2ewt7eT93NcIwAkicZK88jgg18g/8O0v2tP+icWv/hWaJ/8AJ9AHyrRX1V/w7S/a0/6Jxa/+FZon/wAn0f8ADtL9rT/onFr/AOFZon/yfQB9q/8ABLj/AJMT+GX/AHE//Tpd19VV+QX7BX/BQT4HfsnfCjRfgn8atZ/4Q74jeF/tX26x+x3V9s+03ct3bt51rHLG+6C4ib5XON2DhgQPQv2o/wDgr38Lvh/4E1PxR8IyvivxtbTQxWmi6ra3Nnayh5FV5JLoIDH5abn+RW3kbOFYkAHtn7Uf7Lnwx/bR+BPhn4NfGXwz/wAJj8NvEv2r+1dE+33Vh9p+z3Vvaw/vrWWKdNstvE/yOAcbWGVAHv8A8LfhT4Y+C3gTTPBvg3TP7G8N6b5v2Sy+0Sz+X5kryv8APKzOcvI55Y4zgcACvhX4D/8ABYH9lH4oaRa3Wr+MpfBuozEq+n6zpl1hlBx5iTRRNDIp/4ED/CxBzX1Po37Zf7Pmuadb39l8X/BctpcoJIZF1y1AdGGQeZMjigD3Oivlb9uD9o/4D/Db9k7x1rWueObDWdIvNMm03ZpOp273Ukk6bERCkjYLH+IjAHJIHNflX+wx+wx/w2j/wm3/Fbf8ACHf8I19h/wCYT9u+0/aPtH/TeLZt+z++d3bHIB+/1FfAH7Uf/BKT/hmv4E+JviP/AMLR/wCEj/sX7L/xLP8AhHvsvneddRQf637U+3Hm7vunO3HGcj4A+Gfw98QfFf4ieHfA/hi1/tDxH4i1G30rT7XesXn3M8ixRpvcqq5ZgNzMAPUigD+qiiiv5qK9V+CX7TvxC/Z3F5H4N1f7Na3z7pbS6tor20LYxuEFwjoGIALYAJ2qSflFAHtX/BUX9kP4o/HH9obSvHXwe8Pal4rN9okEF9/ZL20c6PbzyrFuE8kRIMcwHysT8pyOufHz+wX+1Z/0Q3x3/3+03/5Or3H4V/8FivFV5YeIrTxz4B0S/1aHSby50jUPDd7PpUa3cUTyIlwJ/tk3ls6qjNG6sC2dhGFrvvAn/BYj4r+MNdl09/hH4KaG3sZr56XqyF0X/VqPt/zSNuQDn+IE4wKAPzj+On7LnxP/Zr/ALE/4WP4Z/4Rz+2vP+wf6fa3XneT5fm/6iV9uPNj+9jO7jODj5Vr6q/4Kj/tY/EL9qz48ahB4u0Z/DHhzwpc3mm6DpEu1niiaQRyzSOuFkkl8sNnhQoVVHG5vlWgAooooA/qor5V/4Kj/8AJifxN/7hn/p0tK+qq/Kv/gud/wA0T/7jf/thQHfQ/KuiiigD9/v+CXH/ACYn8Mv+4n/6dLuvqqv5V6KAP6qPib8SNC+EXw+8QeN/FN4NP8PeH7GXUb+42lvLgiUs7bVBZsAZwoJPYGv51P2gv+C0n7Q/xK8X6hN8ONSg+G3hTzmbT7C3sLa5v/Jzx5146b3cr18vYueNvGT9Tftk/tz+EP2rP2BNc8IfD7VJh8Qr7VrfTNQ8MTwSLcQQpLHK1y/GwxFEddyEkMcHKnav50/sufse/HH9qHxVJ4f+FPgu/1j7LIEvtVmT7Pp9iciMSXNzJiOJSxAG4ks3CqxoA2/wDh8X+1p/0UhP8Awj9I/wDkav6Jf+CNnx+8UftBfsd+GZfGOof2z4i8NzzeH7y/MUUZuvs6rskdY1VPMMbKrMqruZGY/MWJ/If4m/8ABJ79rH4VXGivqXw6l8Q29/bfaJrvw3eQataWTBtvl3EtuzeRISGASQq3y52lSDX6Nf8ABFT41fC34D+GfGv7N3j7UZfDPxVvvEfnWekXml3lpFqtrcWtuY1S4ljWHfG8bdZVI3jk5UUAft9Xyr/wVH/5MT+Jv/cM/wDTpaV9K+APEn/CZeAPDniDyvK/tXTLS+8rO7Z5sSPtz3xuxmvz/wD+C4fxC03wD+yBN4Tu5G/tHxvrFtYWMKck+RKlzI7egEYiHuzqO/IB+Gvwr+Fvif40+O9M8G+DdM/tnxJqXm/ZLL7RFB5nlxPK/wA8rKgwkbnlhnGByQK+gP8Ah2l+1p/0Ti1/8KzRP/k+vVf+CUn7Ufww/Zr/AOFo/wDCx/E3/COf219l/YP9AurrzvJ+1+b/AKiJ9uPNj+9jO7jODj9qf+G5/wDl5R/xjj/whP8Awrr/AITT/mZf7W/tT7H9j/0//j28iDzN/wBk8v8A1i7d+7nbtIB+Vf8Aw7S/a0/6Jxa/+FZon/yfX7n/APBLr4F+Ofgn+zPLonxA0j+xNcm124uI7T7TBcfuniiUOWhd1GSGABOcAnocV9VUUAFfgD/wVH/5Ps+Jv/cM/wDTXaV+/wBX4A/8FR/+T7Pib/3DP/TXaUAfKtFFFABRRRQB/VRX5Aft6/8ABwV4J/ZI+Meq/C63+EuoeMpNMt7eZ9UTXodPVzPEsgXy2tZm+XdjO7niu38G/wDBwj+yp4p+Hdz4m1Sx8U+E9Tt5ZLe48N3Olte3vmqMqYpLZmgeNv4XaRcdwDxX4Q/tN/Gb4d/tT/tL+Pfi1rWqDwRpnijUBe22m3tpNdy2yLFHEqk26vn5YwcBflzjGRQB9f8A/D6T4G/9EN1j/wAK6D/5X0f8PpPgb/0Q3WP/AAr4P/lfXyr/AMO0v2tP+icWv/hWaJ/8n0f8O0v2tP8AonFr/wCFZon/AMn0AfVX/D6T4G/9EN1j/wAK6D/5X18//thfts6P+2b4P8NeHvC3wX1jStc8O+KLHxDFeXN7Bfpst0nV42ii0+KRg3nIAfMA4IYAHB+afip+y58T/gX/AGJ/wsfwz/wjn9tef9g/0+1uvO8ny/N/1Er7cebH97Gd3GcHyqgD+qiv5V6/qor+VegAooooA/f7/glx/wAmJ/DL/uJ/+nS7r6qr5V/4Jcf8mJ/DL/uJ/wDp0u6+qqACvlX/AIKj/wDJifxN/wC4Z/6dLSvqvxB4r0Dwhbw3PiDWLDRIZZPKjkv7qO2V327tgMhGThScZ6Amvz//AOC4fxC8N+Af2QJvCet3Xk+IPG+v2NjpFqBueUxSrcSnp8qpGiFmOR8y9yBQB+NVfeX7DX/BVf4k/sS+C9U8GeH9A8N+JtE1C9OoxR61bys9vMyqjETQyxuVKoow2cYPJ4r4Nr91f+CHf/BMD9lv9qX9mnWfiZ8XfBH/CY+KYvFt5o0Fz/a+o2flWUNrZzRx7bW5iVv3lxIdzDdyBnAAoA+m/2O/+Cydt+0d8afDvwj8WfB670rxP4lnkistb8OX7XdotwsEkwjmt5oY5FykbFXVmyVGVUbscL+3t/wAEqfiL+0Z+1Inxe+E+seH/ALNq9lYQ69a+ILqa0lsri3ijj3jy4ZPOjKRKPlIIPJ/l+Rf7WHib9jj9kH9q3xB4J8B/GTxzP8N/CeqyxQ38LWVrcwrBMDcgXV5o0MoiR3kjEjrlU65xmvsL4V/8Fh/+Ce2g6PaXHjT4m/E74gaxDbLFdai9l4eW5vJF+TzJZzpTs7nblix3Z6kmgD9Z/hbovwQ/Ye+F+neBdS+IMdvbzzmSOHVNQfUdQnuJAN/kRIryOwVVGyNSQMcfKcfUPh3xJpnjHw9p/iDQ7yPUtG1OBbqzu4PuTQuMq65wcEEEZ5yK+Cfhz/wVa/4Jr+GtCk0fQPiBb+FbGQ+eYLjw1rdsplZcmR3ksN0kjHlncszEncTkk/MX7N//Bw3+yr8PZJfD+rz+JvC3hu11O6Npd2ug3Oswz2vmyGCU+Wgt/NCbSVVmUEkBiMFgD9+/wCgr+Vevdf2h/8AgrH+yZ8a/gf428F+C/ipbef4i0O/0u3utW0m/wBPhilnhdFDPJBtXhiQWIHqRX4ffC34W+J/jT470zwb4N0z+2fEmpeb9ksvtEUHmeXE8r/PKyoMJG55YZxgckCgD2T/AIJcf8n2fDL/ALif/pru6/f6vwB/4Jcf8n2fDL/uJ/8Apru6/f6gAooooA/Kv/gud/zRP/uN/wDthX5V1+qn/Bc7/mif/cb/APbCvln/AIJ1/sL+If20fifqNtLqEWh+AvDcC3GuatIm91WQkRQQpxukk2tgkhVCkk5Cq4B6r/wS4/ZE+Hv7Zvxx8XeBfiBNrEFkPC8+q6c+kXUdvMLm3urUNkujgoYpZcgDJyvIxx/WJ8Lf2Cvgt8FvHemeMvBvgb+xvEmm+b9kvf7Xv5/L8yJ4n+SWdkOUkccqcZyOQDXhX/BOT9hXwZ+wx4J1/Q/DWtX3irU/EN4t1qGr38aRySRxBlt4kjThI03uQOpLHJb5RX2BQB/KvX6/f8ABLj/AJMT+GX/AHE//Tpd18q/tz/sMf8ADaP/AAhP/Fbf8Id/wjX27/mLfbvtP2j7P/0wi2bfs/vnd2xz6r+wx+3P/wAMXf8ACE/8UT/wmP8Awkv27/mLfYfs32f7P/0wl37vtHtjb3zwAfL//Drj9mL/AKJl/wCV/VP/AJJr5V+KX7BXx2+C3gTU/GXjLwN/Y3hvTfK+13v9r2E/l+ZKkSfJFOznLyIOFOM5PAJr9/v+H537Vn/RPvvH/pBab/5Ho/4fnftWf9E++8f+kFpv/kej7g9D+Veiv6qP+FY/C/4jfCe7+Et1rVhYeA/Fvh97q4tSzL/AKTLDJF58wbcDGXZyfUcdOv51ft6f8Eq/Fv7Ovwr1b4sfD/Xj4x8JaYiT6jYTWx/tCxhdwrSFkJWSNNwLFdpUZOGAIoA/ICv6qK/lXr+qigD8Af+Co//ACfZ8Tf+4Z/6a7SvlWv6U/24P+CTHxM/aU/aq8d/EbwHr3hO38N6z9g+xx6rqN3b3EflWFvA+5I7SVBl4mIw54xkA5A/P7/hz58f/APqQf/Cp/wDwW0AfD/8AwQx/5rZ/3BP/AG/r9VK/P79lz/glJ+0p+zX/AMLR/wCFj+G/DXh7+2vsX9n/ANn+KLS/87yftHm7vLtU2bfMj6kZ3d8HH1V8C/27vgN8dPGnhfwT4L8c/wBseJdZ8/7JZf2RqEHmeXE8r/PNAqDCRueWGcYHJFAH0BRRXyr/AMPR/wBmL/opv/lA1T/5GoA+qq+Vf+Co/wDyYn8Tf+4Z/wCnS0r1X4F/tRfDD9pT+2/+FceJv+Ej/sXyPt/+gXVr5PneZ5X+viTdnypPu5xt5xkY9VoA/lXor+qj4W/sFfAn4LeO9M8ZeDfA39jeJNN837Je/wBr38/l+ZE8T/JLOyHKSGOVOM5HIBrofiB+zn8G/ix4kuvEnjD4deHvEeu3axpcajqOmQXNxKsahEBkkQsQqgKOfujoBQB/MroXhXX/ABbqBsPD+i6hrd2o3eTp9pJcOAM5O2NScYB7V9wfsl/8Enfjd8eviBo48feD/FHw58CwXUNxq+o6pYzadcNbK4MkNojAeZKw+XKHarY3Ec1+75t9O+GPw6uJfD+jrL/YmnytaaZp8SQ+Z5cbPHDEv3QWwqqOAOBxX5efCf/guX4t0P4lJD8YvAGi3vhW/mWFdQ8JNc299ppOFLmK4Z1uUUklsGN8DABPzUAfRH/AAXw8U+DtL/4J/6p4X1O5ifxZ4h1jT4/D2krjz5pIZ45ZhH3YCI5YgdCR0Br8if2HP2O/ix+238Sv8AhXnwotLWSe1tvt2q6hqU4gs9OtdwUSSnl2ZnIVEQMzYYkBVZl/UL9or4E+Hf+Cj/APwU++Hw+D/iXStY8GeAtBsY/F+pWqyHT7O4LG81DT47hkj+Y3AVW6Kot2/iJ2/td4C+Hvhr4T+DtL8H+ENJg0Lw5pUQhs7C1BCRLkseSSzMzEszMSzElmJJJIB+P3xe/wCDeX4N+Ivh7BZ/DH4geL/DfjCxQm3v9clh1awupByY5rUR27RqTwGjfgYyjVi/8E8v+CVvxr+CH7YPhnxh8UfA2iSeEfC0WoSWev6ff2lyk97JbPbwrE0EsknAmkeQOmNqbc5YV/QVRQAV/KvX9VFfyr0Ae/8AwS/b1+O3wW8CaZ4N8G+Of7G8N6b53n2S/wDCNhP5nmSvK/zywM5y8jnknGcDAxXz/wDt6/t6/Hb40/sneOfBvjLxz/bPhvUvsP2uy/siwg8zy7+3lf55IFYYSNDwwzjB4JFeAUUAFFFFAH//2Q==" style="width:120px;height:120px;border-radius:8px;border:2px solid #e0e0e0;" alt="QR Code">
-</td>
-<td style="border:none;padding:0 0 0 12px;vertical-align:middle">
-<p style="margin:0 0 6px;font-size:16px;font-weight:700;color:#1a1a1a">Ham Insight · 你的每日 AI 情报官</p>
-<p style="margin:0 0 4px;font-size:13px;color:#666">每日深度早报 · AI 驱动一手资讯</p>
-<p style="margin:0;font-size:11px;color:#999">长按识别二维码</p>
-</td>
-</tr>
-</table>
-</section>
+<!-- 中国新闻 -->
+<div class="section" style="background:#f0fdf4;">
+  <div class="section-title"><span class="icon">🇨🇳</span>中国新闻</div>
+  <div class="card">
+    <div class="card-title">📌 人民币中间价报6.8426元，上调41个基点</div>
+    <div class="card-desc">中国外汇交易中心数据显示，5月12日银行间外汇市场人民币汇率中间价为1美元对人民币6.8426元，上调41个基点。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 纵深推进全国统一大市场建设</div>
+    <div class="card-desc">中共中央政治局会议要求"纵深推进全国统一大市场建设，深入整治内卷式竞争"，阐释强大国内市场集"大、强、活、稳"于一体的核心特质。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 我国牵头制定5项天然气国际标准发布</div>
+    <div class="card-desc">ISO正式发布由我国牵头制定的5项天然气领域国际标准，涵盖页岩气开发、含硫气藏等领域，为全球能源市场提供"中国方案"。</div>
+  </div>
+</div>
 
-<section class="footer">
-<p>Ham Insight · 每日早报 | AI 辅助生成</p>
-</section>
+<!-- 国际新闻 -->
+<div class="section" style="background:#fef2f2;">
+  <div class="section-title"><span class="icon">🌍</span>国际新闻</div>
+  <div class="card">
+    <div class="card-title">⚔️ 俄乌互相指责继续交火，停火协议即将到期</div>
+    <div class="card-desc">俄乌停火协议临近到期，双方互相指责违反协议继续交火。美国斡旋的停火前景堪忧，东欧局势恐再度升级。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">⚔️ EU制裁协助俄罗斯绑架乌克兰儿童的实体</div>
+    <div class="card-desc">欧盟对协助俄罗斯绑架数千名乌克兰儿童的实体和个人实施制裁，这是俄乌冲突中人道主义问题的延续。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">🛢️ 伊朗战争重塑全球投资风险地图</div>
+    <div class="card-desc">投资者加速重新评估资产配置，投资移民项目申请量大幅上升，阿联酋客户咨询量增长41%。地缘政治不确定性正在改变资本流向。</div>
+  </div>
+</div>
+
+<!-- AI/半导体/机器人 -->
+<div class="section" style="background:#f5f3ff;">
+  <div class="section-title"><span class="icon">🤖</span>AI · 半导体 · 机器人</div>
+  <div class="card">
+    <div class="card-title">📌 Powerchip Q1营收同比增22%，先进制程需求强劲</div>
+    <div class="card-desc">台湾力积电Q1营收同比增长22%，净利润达142.31亿新台币，产能利用率和先进制程需求驱动增长。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 SAP × Cyberwave：物流仓库部署全自主AI机器人</div>
+    <div class="card-desc">SAP与Cyberwave在SAP物流仓库成功部署全自主AI驱动机器人，标志着企业物理AI能力从概念到运营的关键里程碑。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 韩国探索现代机器人军事用途</div>
+    <div class="card-desc">韩国因兵源下降，探索将现代机器人用于军事用途，以应对人口下降带来的国防挑战。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 韩国初创公司RLWRLD开发机器人AI大脑</div>
+    <div class="card-desc">通过捕捉工人技术动作来训练机器人AI大脑，为酒店等行业开发智能化机器人解决方案。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 中国AGIBOT：2026年是人形机器人"部署阶段"起点</div>
+    <div class="card-desc">中国机器人公司AGIBOT提出从"能力驱动"转向"部署驱动"，覆盖零售、物流、工业等场景。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 法律行业AI转型：白领工作变革风向标</div>
+    <div class="card-desc">Bloomberg Law分析指出法律行业的AI转型被视为白领工作AI化的风向标，但隐私和准确性仍是最大挑战。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 Newsweek AI影响力奖：美国成年人AI使用率翻倍至50%</div>
+    <div class="card-desc">Newsweek第二届AI影响力奖表彰52个组织在48个类别中的AI创新方案。数据显示美国成年人AI工作使用率已从三年前翻倍至50%。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 软件定义汽车：网络安全风险行业难管</div>
+    <div class="card-desc">软件定义汽车带来的网络安全风险已成为行业难以管理的挑战，汽车行业面临新的安全威胁。</div>
+  </div>
+</div>
+
+<!-- 财经 -->
+<div class="section" style="background:#fffbeb;">
+  <div class="section-title"><span class="icon">💰</span>财经动态</div>
+  <div class="card">
+    <div class="card-title">📈 标普500和纳指续创新高，油价因地缘政治上涨</div>
+    <div class="card-desc">美股周一走高，标普500和纳斯达克创纪录新高。特朗普拒绝伊朗和平方案回应，油价随之上涨。摩根士丹利警告霍尔木兹关闭或推高布伦特至150美元。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📈 Kalshi完成10亿美元F轮融资</div>
+    <div class="card-desc">金融科技公司Kalshi完成10亿美元F轮融资，为近期最大规模金融科技融资交易之一。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📈 比特币机构需求恢复，预测均价12.3万美元</div>
+    <div class="card-desc">机构需求恢复和ETF资金流入推动比特币2026年均价预测至约12.3万美元。BTC当前在95,000-120,000美元区间交易。LM Funding America持有334 BTC，价值2530万美元。</div>
+  </div>
+</div>
+
+<!-- 科学/健康/环境 -->
+<div class="section" style="background:#f0f9ff;">
+  <div class="section-title"><span class="icon">🔬</span>科学 · 健康 · 环境</div>
+  <div class="card">
+    <div class="card-title">📌 Nature Geoscience：平流层冷却机制新解</div>
+    <div class="card-desc">Nature Geoscience发表研究解释平流层冷却的气候变化机制，为理解全球气候系统提供了新的科学视角。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 AI赋能可穿戴设备：预言健康风险的未来</div>
+    <div class="card-desc">可穿戴设备越来越多地利用AI预测健康问题，Oura Ring、Fitbit等设备正在扩展其健康监测和分析能力。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">⚠️ 邮轮汉坦病毒疫情持续，美国乘客阳性</div>
+    <div class="card-desc">MV Hondius邮轮爆发的汉坦病毒疫情持续，一名返美航班上的美国乘客检测出Andes变异汉坦病毒阳性，已被隔离在生物防护单元。</div>
+  </div>
+  <div class="card" style="margin-top:12px;">
+    <div class="card-title">📌 NASA卫星捕捉中大西洋春季浮游植物大爆发</div>
+    <div class="card-desc">NASA Aqua卫星MODIS图像显示美国中大西洋沿岸春季浮游植物大爆发，海洋色彩斑斓。</div>
+  </div>
+</div>
+
+<!-- 深度解读 -->
+<div class="deep-dive">
+  <div class="section-title">🔍 深度解读</div>
+  <div class="card">
+    <div class="card-title">美中峰会：最值得关注的三个看点</div>
+    <div class="card-desc">
+      <p><strong>① Musk和Cook随行的信号</strong> — 两位CEO代表美国科技巨头在华利益。Musk的特斯拉和SpaceX、Cook的苹果深度嵌入中国市场，他们的随行表明经贸议题是美方核心关切。</p>
+      <p style="margin-top:8px;"><strong>② 伊朗战争：美中能否找到共识？</strong> — 中国是伊朗最大石油买家，伊朗战争直接冲击中国能源安全和"一带一路"布局。美方希望通过中方施压伊朗，但中方态度目前不明朗。</p>
+      <p style="margin-top:8px;"><strong>③ AI合作 vs 科技封锁</strong> — Nvidia CEO黄仁勋未受邀值得玩味。美方可能在芯片出口管制上有所调整，同时寻求在AI安全领域的合作。Cerebras的48亿美元IPO恰逢其时，彰显AI赛道热度不减。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 风险点 -->
+<div class="section" style="background:transparent;padding:0;">
+  <div class="section-title" style="padding:0 4px 8px;">⚠️ 风险点</div>
+  <div class="risk-card">
+    <div class="card-title">🛢️ 伊朗局势：油价失控风险</div>
+    <div class="card-desc">特朗普拒绝伊朗和平方案、停火协议"生命垂危"、霍尔木兹海峡紧张 — 三重风险叠加，摩根士丹利已警告布伦特原油可能升至150美元。亚洲作为全球最大能源进口地区首当其冲。</div>
+  </div>
+  <div class="risk-card">
+    <div class="card-title">⚔️ 俄乌停火失效风险</div>
+    <div class="card-desc">美斡旋的停火协议即将到期，双方互相指责继续交火。若协议破裂，欧洲地缘政治将再度紧张，对能源价格和资本市场构成额外压力。</div>
+  </div>
+  <div class="risk-card">
+    <div class="card-title">💉 汉坦病毒邮轮疫情</div>
+    <div class="card-desc">Andes变异汉坦病毒已在国际邮轮上爆发，一名美国乘客检测阳性。虽规模较小，但邮轮的封闭环境使疫情扩散风险值得关注。</div>
+  </div>
+</div>
+
+<!-- 下一阶段观察 -->
+<div class="section" style="background:transparent;padding:0;">
+  <div class="section-title" style="padding:0 4px 8px;">👁️ 下一阶段观察</div>
+  <div class="outlook-card">
+    <div class="card-title">📅 5月13-15日 · 美中峰会</div>
+    <div class="card-desc">Trump访华期间双方在贸易、伊朗、台湾等问题上的表态方向，将影响全球市场风险偏好。</div>
+  </div>
+  <div class="outlook-card" style="margin-top:10px;">
+    <div class="card-title">📈 Cerebras IPO定价</div>
+    <div class="card-desc">若成功募资48亿美元，将成为今年最大规模IPO，为AI芯片赛道注入强心剂。</div>
+  </div>
+  <div class="outlook-card" style="margin-top:10px;">
+    <div class="card-title">🛢️ 伊朗局势走向</div>
+    <div class="card-desc">美中峰会是伊朗问题外交解套的关键窗口期，关注能否出现转折信号。</div>
+  </div>
+  <div class="outlook-card" style="margin-top:10px;">
+    <div class="card-title">🏦 中国货币政策后续</div>
+    <div class="card-desc">央行"适度宽松"定调下，关注后续LPR调整及财政政策配合力度。</div>
+  </div>
+</div>
+
+<!-- 关注引导卡片 -->
+<div class="follow-card">
+  <table>
+    <tr>
+      <td>
+        <img class="qrcode" src="data:image/png;base64,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" alt="QR Code" />
+      </td>
+      <td style="text-align:left;padding-left:16px;">
+        <div class="title">Ham Insight · 你的每日 AI 情报官</div>
+        <div class="sub">每日深度早报 · AI 驱动一手资讯</div>
+        <div class="small">长按识别二维码</div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>Ham Insight · 每日早报 | AI 辅助生成</p>
+  <p style="margin-top:4px;font-size:11px;">2026-05-12 | 数据来源：Yahoo Finance, 南华早报, AP News, 时代财经等</p>
+</div>
 
 </div>
 </body>
